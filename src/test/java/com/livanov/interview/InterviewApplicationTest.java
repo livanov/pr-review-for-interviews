@@ -31,4 +31,26 @@ public class InterviewApplicationTest {
                 .perform(get("/people"))
                 .andExpect(status().isOk());
     }
+
+    @Test
+    void uploadGradesFileTest() throws Exception {
+
+        mockMvc
+                .perform(
+                        multipart("/people/grades")
+                                .file("grades", fileContent("grades.csv"))
+                )
+                .andExpect(status().isOk());
+
+    }
+
+    private byte[] fileContent(String fileName) throws IOException, URISyntaxException {
+
+        URL fileUrl = this.getClass().getClassLoader().getResource(fileName);
+        URI fileUri = fileUrl.toURI();
+        Path filePath = Paths.get(fileUri);
+        byte[] fileBytes = Files.readAllBytes(filePath);
+
+        return fileBytes;
+    }
 }
