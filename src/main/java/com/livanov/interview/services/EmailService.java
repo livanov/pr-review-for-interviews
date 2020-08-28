@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 
+	// fake out the functionality
     public void send(String recipient, String message) {
-        // sending email
+    	System.out.println("Sending email to: " + recipient);
+    	System.out.println(">>>\t" + message);
     }
 }
