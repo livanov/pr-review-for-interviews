@@ -1,0 +1,10 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  ide_config:
+    default_open_files:
+      - ./src/main/java/com/livanov/interview/controllers/PersonController.java
+    project_menu:
+      run: "./mvnw -DskipTests spring-boot:run"
+      install: "./mvnw clean -DskipTests install"
+      test: "./mvnw clean test"

@@ -12,4 +12,4 @@ You can query the service with its in-memory database about:
 * list of grades for a person
 
 
-With the latest commit (lives in the **feature-request** branch) I am conducting an interview that aims to show the peer review capabilities of the applicant.
+With the latest commit I am conducting an interview that aims to show the peer review capabilities of the applicant.
